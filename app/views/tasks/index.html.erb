@@ -1,0 +1,75 @@
+<div>
+  <h1>Task Manager</h1>
+  <div>
+  <ol start="1">
+    <% @tasks.each do |task| %>
+    <li><strong><p><%= task.name %></strong>: <%= task.details%><br>[<%= link_to "View", task_path(task), method: :get %>] [<%= link_to "Edit", edit_task_path(task) %>] [<%= link_to "Delete", task_path(task), method: :delete, data: {confirm: "Are you sure?"} %>]</p></li>
+    <% end %>
+  </div>
+  </ol>
+  <form action="/tasks/new">
+    <input type="submit" value="New Task">
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+  body {
+  font-family : "tablet-gothic", verdana, arial, sans-serif;
+  }
+
+  div {
+  padding : 5%;
+  }
+
+  h1 {
+  background : #ea2e49;
+  color : #fff;
+  display : inline-block;
+  margin-bottom : 1em;
+  padding : 0.5em 1em;
+  }
+
+</style>
+
